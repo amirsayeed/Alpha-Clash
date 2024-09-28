@@ -11,11 +11,11 @@
 
 <body class="font-poppins">
     <main class="bg-[#010313] min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-center">
-        <section class="min-h-screen text-white flex items-center justify-center hidden">
+        <section id="home-screen" class="min-h-screen text-white flex items-center justify-center">
             <div class="flex flex-col items-center gap-10">
                 <h1 class="font-anton font-bold text-8xl uppercase">Alpha Clash Pro</h1>
                 <p class="text-2xl font-medium">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-                <button class="btn bg-white text-[#010313] text-xl font-semibold">Play Now</button>
+                <button onclick="play()" class="btn bg-white text-[#010313] text-xl font-semibold">Play Now</button>
             </div>
         </section>
         <section id="play-ground" class="hidden">
@@ -27,7 +27,7 @@
                         </p>
                     </div>
                     <div class="flex justify-center items-center h-full">
-                        <p id="current-alphabet" class="text-black text-9xl font-bold uppercase">Y</p>
+                        <p id="current-alphabet" class="text-black text-9xl font-bold uppercase"></p>
                     </div>
                 </div>
 
@@ -93,7 +93,8 @@
             </div>
         </section>
     </main>
-
+    <script src="scripts/playGame.js"></script>
+    <script src="scripts/utility.js"></script>
 </body>
 
 </html>
