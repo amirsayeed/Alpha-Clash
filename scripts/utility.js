@@ -15,7 +15,7 @@ function setBackgroundColorById(elementId){
 
 function removeBackgroundColorById(elementId){
     const element = document.getElementById(elementId);
-    element.classList.add('bg-orange-400');
+    element.classList.remove('bg-orange-400');
 }
 
 function getRandomAlpha(){
