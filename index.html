@@ -4,22 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Alpha Clash</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/2dad74e488.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="font-poppins">
-    <main class="bg-[#010313] min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-center">
+    <main class="min-h-screen bg-[#010313] bg-[url(images/background.png)] bg-no-repeat bg-center">
         <section id="home-screen" class="min-h-screen text-white flex items-center justify-center">
             <div class="flex flex-col items-center gap-10">
-                <h1 class="font-anton font-bold text-8xl uppercase">Alpha Clash Pro</h1>
+                <h1 class="font-anton font-bold text-9xl uppercase">Alpha Clash Pro</h1>
                 <p class="text-2xl font-medium">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
                 <button onclick="play()" class="btn bg-white text-[#010313] text-xl font-semibold">Play Now</button>
             </div>
         </section>
         <section id="play-ground" class="hidden">
-            <div class="flex flex-col items-center gap-16 pt-20">
+            <div class="flex flex-col items-center gap-16 pt-16">
+                <div id="timer" class="border-2 bg-red-600 rounded-xl text-black p-4 text-xl font-bold">
+                    <i class="fa-solid fa-stopwatch"></i> Time Left: 60</div>
                 <div
                     class="artboard artboard-horizontal phone-6 border-[20px] rounded-2xl border-[#010313CC] bg-[#FFFFFFB3]">
                     <div class="flex justify-center">
@@ -84,6 +88,7 @@
         </section>
         <section id="final-score" class="flex justify-center items-center min-h-screen hidden">
             <div class="text-white text-center space-y-6 bg-[#FFFFFF33] p-4 rounded-lg">
+                <h4 class="text-3xl font-semibold">Game Over!</h4>
                 <h1 class="text-8xl">
                     <span class="font-extrabold">Score:</span>
                     <span id="last-score"></span>

@@ -8,6 +8,26 @@ function continueGame(){
 
 }
 
+let countdown;
+function timeCount(){
+    let timeLeft = 60;
+
+    const timerDisplay = document.getElementById("timer");
+
+        clearInterval(countdown);
+        timerDisplay.textContent = `Time Left: ${timeLeft}`;
+
+        countdown = setInterval(() => {
+        timeLeft--; 
+        timerDisplay.textContent = `Time Left: ${timeLeft}`; // Update timer display
+
+        if (timeLeft <= 0) {
+            clearInterval(countdown); // Stop the timer when time reaches 0
+            timerDisplay.textContent = "Time's up!";
+            gameOver();
+        }
+    }, 1000); // 1000ms = 1 second
+}
 function handlKeyUpPressed(event){
     const keyPressed = event.key;
     console.log("key is pressed", keyPressed);
@@ -50,12 +70,10 @@ function play(){
     hideElementById('home-screen');
     hideElementById('final-score');
     showElementById('play-ground');
-
+    timeCount();
     setTextElementValueById('life', 5);
     setTextElementValueById('game-score', 0);
-
     continueGame();
-
 }
 
 function gameOver(){
@@ -68,4 +86,6 @@ function gameOver(){
 
     const currentAlphabet = getElementTextById('current-alphabet');
     removeBackgroundColorById(currentAlphabet);
+
+    clearInterval(countdown);
 }

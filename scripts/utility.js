@@ -37,9 +37,9 @@ function getElementTextById(elementId){
 }
 
 function getRandomAlpha(){
-    const alphabetStr = 'abcdefghijklmnopqrstuvwyz';
+    const alphabetStr = 'abcdefghijklmnopqrstuvwxyz';
     const alphabets = alphabetStr.split('');
-    const randomAlpha = Math.random(alphabets)*25;
+    const randomAlpha = Math.random()*25;
     const index = Math.round(randomAlpha);
 
     const alphabet = alphabets[index];
