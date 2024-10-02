@@ -42,7 +42,7 @@ function handlKeyUpPressed(event){
 
     if(keyPressed === expectedAlphabet){
         console.log('you win');
-
+        
         const currentScore = getTextElementValueById('game-score');
         
         const updatedScore =currentScore + 1;
